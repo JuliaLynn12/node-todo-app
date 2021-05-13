@@ -8,4 +8,7 @@ mongoose.connect("mongodb://localhost/todo_express", {
   useUnifiedTopology: true,
 });
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
+
 app.listen(3000, () => console.log("Server started listening on port: 3000"));
